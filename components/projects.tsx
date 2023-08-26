@@ -5,6 +5,8 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -19,6 +21,13 @@ export default function Projects() {
           </React.Fragment>
         ))}
       </div>
+      <Link
+          href="https://github.com/HeaLthyDrugs"
+          className="mt-7 justify-center bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+        >
+          More Projects{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
     </section>
   );
 }
