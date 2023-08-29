@@ -13,3 +13,7 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out; /* Adjust the timing function and duration as needed */
+}

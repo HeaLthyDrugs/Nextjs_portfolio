@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -7,6 +9,10 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ToggleUp from "@/components/toggleup";
+import Loading from "@/components/Loading";
+import React, { useState, useEffect, useContext } from 'react';
+import { LoadingContext } from "@/components/LoadingProvider";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +26,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const isLoading = useContext(LoadingContext);
+  const [isContentVisible, setContentVisible] = useState(!isLoading);
+
+  useEffect(() => {
+    const delayTimeout = setTimeout(() => {
+      setContentVisible(true);
+    }, 1000);
+
+    return () => clearTimeout(delayTimeout);
+  }, []);
+
   return (
     <html lang="en" className="!scroll-smooth">
       <body
@@ -31,9 +48,16 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
+            {isLoading && <Loading/>}
+            <div
+              className={`transition-opacity ${
+                isContentVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              {children}
+            </div>
             {children}
             <Footer />
-
             <Toaster position="top-right" />
             <ToggleUp />
             <ThemeSwitch />
