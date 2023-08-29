@@ -5,31 +5,36 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import {BiHomeAlt2} from 'react-icons/bi'
+import {CgProfile} from 'react-icons/cg'
+import {GoProjectSymlink} from 'react-icons/go'
+import {LiaToolsSolid} from 'react-icons/lia'
+import {GiJourney, GiTalk} from 'react-icons/gi'
 
 export const links = [
   {
-    name: "Home",
     hash: "#home",
+    icon: React.createElement(BiHomeAlt2)
   },
   {
-    name: "About",
     hash: "#about",
+    icon: React.createElement(CgProfile)
   },
   {
-    name: "Projects",
     hash: "#projects",
+    icon: React.createElement(GoProjectSymlink)
   },
   {
-    name: "Tech",
     hash: "#skills",
+    icon: React.createElement(LiaToolsSolid)
   },
   {
-    name: "Background",
     hash: "#experience",
+    icon: React.createElement(GiJourney)
   },
   {
-    name: "Contact",
     hash: "#contact",
+    icon: React.createElement(GiTalk)
   },
 ] as const;
 
