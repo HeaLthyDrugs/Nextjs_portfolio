@@ -1,3 +1,5 @@
+"use client";
+
 import About from "@/components/about";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
@@ -6,6 +8,7 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import { LoadingProvider } from "@/components/LoadingProvider";
+
 
 export default function Home() {
   return (

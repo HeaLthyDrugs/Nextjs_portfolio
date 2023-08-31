@@ -9,7 +9,7 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ToggleUp from "@/components/toggleup";
-import Loading from "@/components/Loading";
+import Loading from "@/components/PreLoader/Loading";
 import React, { useState, useEffect, useContext } from 'react';
 import { LoadingContext } from "@/components/LoadingProvider";
 

@@ -21,6 +21,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.17",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.4.8",
     "postcss": "8.4.24",
     "react": "18.2.0",
@@ -32,6 +33,8 @@
     "react-tsparticles": "^2.12.2",
     "react-vertical-timeline-component": "^3.6.0",
     "resend": "^0.16.0",
+    "saas": "^1.0.0",
+    "sass": "^1.66.1",
     "tailwindcss": "3.3.2",
     "tsparticles": "^2.12.0",
     "typescript": "5.1.5"
