@@ -30,7 +30,7 @@ const ToggleUp = () => {
 
   return (
     <button
-      className={`fixed bottom-7 left-5 w-[3rem] h-[3rem] bg-gray-950 bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all ${
+      className={`fixed bottom-7 left-5 animate-bounce bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       onClick={scrollToTop}

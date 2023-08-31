@@ -13,7 +13,6 @@ import Loading from "@/components/Loading";
 import React, { useState, useEffect, useContext } from 'react';
 import { LoadingContext } from "@/components/LoadingProvider";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -47,16 +46,18 @@ export default function RootLayout({
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            {isLoading && <Loading/>}
-            <div
-              className={`transition-opacity ${
-                isContentVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              {children}
-            </div>
-            {children}
+            {isLoading ? (
+              <Loading/>
+            ) : (
+              <div
+                className={`transition-opacity ${
+                  isContentVisible ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <Header />
+                {children}
+              </div>
+            )}
             <Footer />
             <Toaster position="top-right" />
             <ToggleUp />
