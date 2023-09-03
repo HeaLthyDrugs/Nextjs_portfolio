@@ -3,7 +3,7 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
+// import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,12 +23,11 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
-  const { ref } = useSectionInView("Background");
+  // const { ref } = useSectionInView("Background");
 
   return (
     <section
       id="skills"
-      ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>Technologies</SectionHeading>

@@ -7,14 +7,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+// import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useSectionInView } from "@/lib/hooks";
+// import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  // const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const [text, count] = useTypewriter({
     words: [
@@ -28,7 +28,7 @@ export default function Intro() {
 
   return (
     <section
-      ref={ref}
+      // ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
@@ -88,7 +88,7 @@ export default function Intro() {
           href="#contact"
           className="group bg-green-300 text-slate-500 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-green-600 text-white active:scale-105 transition"
           onClick={() => {
-            setActiveSection("Contact");
+            // setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
