@@ -1,20 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
 
 export default function About() {
   const { ref } = useSectionInView("About");
-
-  const [showSecondParagraph, setShowSecondParagraph] = useState(false);
-
-  const toggleSecondParagraph = () => {
-    setShowSecondParagraph(!showSecondParagraph);
-  };
 
   return (
     <motion.section
@@ -27,30 +19,14 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        <span className="font-bold">I am a Developer, Freelancer, Sketch Artist & A Gamer</span> <br />
-        In the summer of 21, I started programming. & I started with ...
+        Hello, Lads👋 I'm <span className="font-bold">Manish Vishwakarma</span>, Self-taught since my younge stage,
+        I love learning new things to improve my skills. and During my experiences,I participated in several hackathons organized by my college.These events were intensive periods of one to two weeks during which we had to develop a project meeting the requirements of the client. & now I'm an Independent Developer with intrested in using various technologies to build optimised website with animation.
       </p>
-      {showSecondParagraph ? (
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-        >
-          <p>
-            <span className="font-bold">Python</span> later than most, I dived into the Development stuff and still in there. Now talking about <span className="font-bold">"What I have done so far in this field ?" </span> - I have a 3.5 star rating in HackerRank for Problem solving , Contributor to Cal.com & GitHub CLi , Blogger at Hashnode(Current) , Worked on Hackathon Projects.
-          </p>
-        </motion.p>
-      ) : null}
-      <Link
-        href="/"
-        onClick={(e) => {
-          e.preventDefault();
-          toggleSecondParagraph();
-        }}
-        className="group justify-center bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
-      >
-        {showSecondParagraph ? "Read less" : "Read more"}{" "}
-      </Link>
+
+      <p>
+        <span className="italic">When I'm not coding</span>, I enjoy playing
+        Mobile games. and have a Hands on Experience in Sketching, Illustration etc.
+      </p>
     </motion.section>
   );
 }

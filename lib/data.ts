@@ -1,15 +1,22 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import carhub from '@/public/carhub.png'
+import cinemaura from "@/public/cinemaura.png";
+import macos from "@/public/macos.png";
+import textweet from "@/public/textweet.png";
 import {BiHomeAlt2} from 'react-icons/bi'
 import {CgProfile} from 'react-icons/cg'
 import {GoProjectSymlink} from 'react-icons/go'
 import {LiaToolsSolid} from 'react-icons/lia'
 import {GiJourney, GiTalk} from 'react-icons/gi'
+import {FaPython, FaReact, FaYarn} from 'react-icons/fa'
+import { IoLogoJavascript } from 'react-icons/io'
+import {TbBrandVscode, TbBrandNextjs} from 'react-icons/tb'
+import {SiFlutter, SiHashnode, SiTypescript, SiRedux} from 'react-icons/si'
+import {BsGithub, BsGit} from 'react-icons/bs'
+
+
 
 export const links = [
   {
@@ -40,76 +47,102 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "INS Bootcamp",
+    location: "Lonavla, Maharashtra",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 6 months of studying. and immediately got hired as a Intern for Junior Data entry job.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2019-2021",
   },
   {
     title: "Front-End Developer",
-    location: "Orlando, FL",
+    location: "Remote",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a front-end developer for 2 Months in my Local area company & also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2022 - 2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Bachelor's of Computer Science",
+    location: "Lonavla, Maharashtra",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I am currently in the process of completing my Bachelor's degree while concurrently pursuing freelance work as a developer as part of my side hustle ",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
-    livePreview: "https://github.com"
+    title: "CinemAura",
+    imageUrl: cinemaura,
+    livePreview: "https://cinemaura.netlify.app/"
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-    livePreview: "https://github.com"
+    title: "CarHub",
+    imageUrl: carhub,
+    livePreview: "https://car-showcase-delta-one.vercel.app/"
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-    livePreview: "https://github.com"
+    title: "MacOS Clone",
+    imageUrl: macos,
+    livePreview: "https://healthydrugs.github.io/MacOS_system_M1/"
+    },
+  {
+    title: "TextWeet",
+    imageUrl: textweet,
+    livePreview: "https://textweet-healthydrug-pw1lgjf1u-healthydrugs.vercel.app/"
     },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+{
+  icon: React.createElement(SiTypescript),
+  hash: "#"
+},
+{
+  icon: React.createElement(SiRedux),
+  hash: "#"
+},
+{
+  icon: React.createElement(TbBrandNextjs),
+  hash: "#"
+},
+{
+  icon: React.createElement(FaReact),
+  hash: "#"
+},
+{
+  icon: React.createElement(FaPython),
+  hash: "#"
+},
+{
+  icon: React.createElement(IoLogoJavascript),
+  hash: "#"
+},
+{
+  icon: React.createElement(TbBrandVscode),
+  hash: "#"
+},
+{
+  icon: React.createElement(BsGit),
+  hash: "#"
+},
+{
+  icon: React.createElement(SiFlutter),
+  hash: "#"
+},
+{
+  icon: React.createElement(FaYarn),
+  hash: "#"
+},
+{
+  icon: React.createElement(SiHashnode),
+  hash: "#"
+},
+{
+  icon: React.createElement(BsGithub),
+  hash: "#"
+},
+
 ] as const;

@@ -10,8 +10,9 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ToggleUp from "@/components/toggleup";
 import Loading from "@/components/PreLoader/Loading";
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from "react";
 import { LoadingContext } from "@/components/LoadingProvider";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,11 +48,11 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             {isLoading ? (
-              <Loading/>
+              <Loading />
             ) : (
               <div
                 className={`transition-opacity ${
-                  isContentVisible ? 'opacity-100' : 'opacity-0'
+                  isContentVisible ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <Header />

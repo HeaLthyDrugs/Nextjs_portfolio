@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Oswald:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   --line-color: #e5e7eb;
+}
+
+.font-for-developer {
+  font-family: 'Handjet', cursive !important;
+  /* font-family: 'Oswald', sans-serif; */
 }
 
 html.dark {

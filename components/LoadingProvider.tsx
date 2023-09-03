@@ -12,7 +12,7 @@ export const LoadingProvider: React.FC<{ children: React.ReactNode}> = ({ childr
     // Simulate loading delay
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // Adjust the delay as needed
+    }, 3000); // Adjust the delay as needed
   }, []);
 
   return (
