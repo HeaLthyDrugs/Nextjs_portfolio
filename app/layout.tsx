@@ -8,7 +8,7 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import ToggleUp from "@/components/toggleup";
 import Loading from "@/components/PreLoader/Loading";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { LoadingContext } from "@/components/LoadingProvider";
 
 
@@ -27,13 +27,13 @@ export default function RootLayout({
   const isLoading = useContext(LoadingContext);
   const [isContentVisible, setContentVisible] = useState(!isLoading);
 
-  useEffect(() => {
-    const delayTimeout = setTimeout(() => {
-      setContentVisible(true);
-    }, 1000);
+  // useEffect(() => {
+  //   const delayTimeout = setTimeout(() => {
+  //     setContentVisible(true);
+  //   }, 1000);
 
-    return () => clearTimeout(delayTimeout);
-  }, []);
+  //   return () => clearTimeout(delayTimeout);
+  // }, []);
 
   return (
     <html lang="en" className="!scroll-smooth">
