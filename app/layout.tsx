@@ -16,10 +16,6 @@ import { LoadingContext } from "@/components/LoadingProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Manish Vishwakarma",
-  description: "A developer for App & Web",
-};
 
 export default function RootLayout({
   children,
